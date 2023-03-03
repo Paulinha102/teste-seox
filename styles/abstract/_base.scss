@@ -1,0 +1,66 @@
+@import './variaveis';
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans/OpenSans-Bold.eot');
+  src: url('../fonts/OpenSans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/OpenSans/OpenSans-Bold.woff2') format('woff2'),
+      url('../fonts/OpenSans/OpenSans-Bold.woff') format('woff'),
+      url('../fonts/OpenSans/OpenSans-Bold.ttf') format('truetype'),
+      url('../fonts/OpenSans/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+body{
+  font-family: $fonte;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-white;
+  font-weight: 700;
+}
+
+h1, h2{
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: $color-white;
+}
+
+.size-section, h1{
+  font-size: $font-section;
+  line-height: 34px;
+}
+
+.size-feed-1, h2{
+  font-size: $font-feed-1;
+  line-height: 30;
+}
+
+.size-feed-2, h3{
+  font-size: $font-feed-2;
+  line-height: 30px;
+}
+
+.size-feed-3{
+  font-weight: 700;
+  font-size: $font-feed-3;
+  line-height: 24px;
+}
+
+.size-feed-4{
+  font-size: $font-feed-4;
+  line-height: 19px;
+}
+
+.size-hat{
+  font-weight: 700;
+  font-size: $font-hat;
+  line-height: 16px;
+}
+
+button{
+  font-weight: 700;
+  font-size: $font-feed-4;
+  line-height: 16px;
+}

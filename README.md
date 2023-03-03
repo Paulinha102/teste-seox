@@ -9,7 +9,7 @@ Olá, muito obrigado por participar do processo de contratação da Seox. Este r
 
 ## Requisitos
 
-Você deverá construir uma página responsiva seguindo as orientações visuais dos arquivos em Figma listados abaixo. Nele, você encontrará o layout da versão desktop e mobile, seguido do styleguide com todos os elementos do projeto. 
+Você deverá construir uma página responsiva seguindo as orientações visuais dos arquivos em Figma listados abaixo. Nele, você encontrará o layout da versão desktop e mobile, seguido do styleguide com todos os elementos do projeto.
 
 Para um melhor entendimento da proposta, abaixo seguem também os links do Protótipo Navegável, onde você poderá ver as animações e interações que deverão estar presentes no resultado final.
 
@@ -19,7 +19,7 @@ Atenção: A fidelidade da aplicação com o Figma e o protótipo navegável é 
 
 ### Protótipo navegável
 
-- Desktop: https://www.figma.com/proto/6S1YIPxnMcWp4AE4Al9SRS/Front-End-Test?page-id=1489%3A1836&node-id=1489%3A1838&viewport=1016%2C512%2C0.61&scaling=min-zoom 
+- Desktop: https://www.figma.com/proto/6S1YIPxnMcWp4AE4Al9SRS/Front-End-Test?page-id=1489%3A1836&node-id=1489%3A1838&viewport=1016%2C512%2C0.61&scaling=min-zoom
 - Mobile: https://www.figma.com/proto/6S1YIPxnMcWp4AE4Al9SRS/Front-End-Test?page-id=1489%3A1837&node-id=1489%3A2124&viewport=941%2C700%2C1.02&scaling=scale-down
 
 ### Arquivos Figma
@@ -82,3 +82,6 @@ A entrega final será composta por dois artefatos:
 
 - Nosso time de QA visual é conhecido como "Pixel Hunters". Capriche na fidelidade com o Figma.
 
+## Anotações
+
+- Para os ícones, optei por usar SVG em base64, já que são poucos ícones e não vejo necessidade de carregar uma biblioteca inteira.
