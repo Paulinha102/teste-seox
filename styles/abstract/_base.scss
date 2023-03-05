@@ -12,13 +12,35 @@
   font-style: normal;
   font-display: swap;
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0 !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: $fonte;
+  
+}
 body{
   font-family: $fonte;
   font-size: 16px;
   line-height: 22px;
   color: $color-white;
   font-weight: 700;
+  overflow-x: hidden;
 }
+img{
+  max-width: 100%;
+  height: auto;
+}
+a{
+  text-decoration: none;
+  display: inline-block;
+  transition: $transition;
+}
+
 
 h1, h2{
   font-weight: 700;
@@ -34,7 +56,7 @@ h1, h2{
 
 .size-feed-1, h2{
   font-size: $font-feed-1;
-  line-height: 30;
+  line-height: 30px;
 }
 
 .size-feed-2, h3{
@@ -60,7 +82,32 @@ h1, h2{
 }
 
 button{
-  font-weight: 700;
-  font-size: $font-feed-4;
-  line-height: 16px;
+    cursor: pointer;
+    background: none;
+    color: $color-gray-700;
+    border: 2px solid $color-gray-700;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: $font-feed-4;
+    line-height: 16px;
+    padding: 10.5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all .1s ease-in-out;
+    .ico{
+        background-color: $color-gray-700;
+        
+        width: 6px;
+        height: 12px;
+    }
+    &:hover{
+        background-color:$color-gray-900;
+        color: $color-red-300;
+        border-color:$color-gray-900 ;
+    }
+    &:hover .ico{
+        background-color: $color-red-300;
+    }
 }

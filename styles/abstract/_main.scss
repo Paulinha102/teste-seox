@@ -1,0 +1,88 @@
+@import './variaveis';
+
+.wrapper-videos {
+    overflow-x: hidden;
+    padding: 64px 0 115px;
+    min-height: 100vh;
+    // display: grid;
+    // align-items: center;
+    position: relative;
+    @media(max-width: 767px){ 
+        background: $black-gradient; 
+        padding: 24px 0;
+    }
+
+    &:before {
+        content: "";
+        background-color: $color-gray-700;
+        position: absolute;
+        width: 70%;
+        height: 70vh;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @media(max-width: 767px){
+            display: none;
+        }
+    }
+    
+
+    main{
+        .container{
+            position: relative;
+            &:after{
+                content: "";
+                background: linear-gradient(93.03deg, #222222 0.41%, #2E2E2E 98.74%);
+                position: absolute;
+                width: 100vw;
+                height: calc(100%  + 127px);
+                left: -37px;
+                top: -76px;
+                z-index: -1;
+                border-radius: 8px 0px 0px 8px;
+                @media(max-width: 767px){
+                    display: none;
+                }
+            }
+        }
+        
+        .carrossel-videos {
+            position: relative;
+            overflow-y: clip;
+            @media(max-width: 767px){
+                min-width: 100vw;
+            }
+            .wrapper-itens {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                transition: transform 0.5s ease;
+                @media(max-width: 767px){
+                    display: flex;
+                    overflow-x: scroll;
+                    gap: 16px;
+                    padding-right: 48px;
+                    scroll-snap-type: x mandatory;
+                    -ms-overflow-style: none;
+                    scroll-snap-align: center;
+                }
+                .item-carrossel{
+                    margin-bottom:24px;
+                    @media(max-width: 767px){
+                        width: 292px;
+                        flex: 0 0 auto;
+                        scroll-snap-stop: always;
+                    }
+                }
+            }
+            
+            
+        }
+        
+
+        
+    }
+}
