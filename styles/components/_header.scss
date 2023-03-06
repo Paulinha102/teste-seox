@@ -20,7 +20,7 @@ header {
         display: flex;
         gap: 16px;
 
-        &>button{
+        &a{
             @media(max-width: 767px){
                 font-size: 0;
                 gap: 0;

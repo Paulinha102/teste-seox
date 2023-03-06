@@ -1,4 +1,4 @@
-window.addEventListener('load', renderCarrossel);
+//window.addEventListener('load', renderCarrossel);
 window.addEventListener('resize', renderCarrossel);
 
 function renderCarrossel() {
@@ -26,9 +26,9 @@ function renderCarrossel() {
         buttonUp.disabled = false;
         slideIndex--;
         slider.style.transform = `translateY(${slideIndex * -slideHeight}px)`;
-        if (slideIndex <= 1) {
-          buttonUp.disabled = true;
-        }
+        // if (slideIndex <= 1) {
+        //   buttonUp.disabled = true;
+        // }
       } else {
         buttonUp.disabled = true;
       }
@@ -40,7 +40,7 @@ function renderCarrossel() {
         buttonUp.disabled = false;
         slideIndex++;
         slider.style.transform = `translateY(${
-          slideIndex * -slideHeight - 24
+          slideIndex * -(slideHeight + 24)
         }px)`;
       } else {
         buttonDown.disabled = true;

@@ -163,7 +163,7 @@ h1, h2 {
   line-height: 16px;
 }
 
-button {
+button, .bt {
   cursor: pointer;
   background: none;
   color: #707070;
@@ -179,17 +179,17 @@ button {
   gap: 5px;
   transition: all 0.1s ease-in-out;
 }
-button .ico {
+button .ico, .bt .ico {
   background-color: #707070;
   width: 6px;
   height: 12px;
 }
-button:hover {
+button:hover, .bt:hover {
   background-color: #222222;
   color: #ED686B;
   border-color: #222222;
 }
-button:hover .ico {
+button:hover .ico, .bt:hover .ico {
   background-color: #ED686B;
 }
 
@@ -303,7 +303,7 @@ header .btns-right {
   gap: 16px;
 }
 @media (max-width: 767px) {
-  header .btns-right > button {
+  header .btns-righta {
     font-size: 0;
     gap: 0;
     width: 48px;
@@ -409,6 +409,12 @@ header .btns-right .nav-carrossel button:not([disabled]):hover .ico {
 .card-video .infos {
   padding: 16px;
   background-color: #333333;
+  min-height: 101px;
+}
+@media (max-width: 767px) {
+  .card-video .infos {
+    min-height: unset;
+  }
 }
 .card-video .infos .cat {
   display: block;
@@ -485,6 +491,7 @@ header .btns-right .nav-carrossel button:not([disabled]):hover .ico {
     background: none;
     padding: 0;
     max-width: 715px;
+    min-height: unset;
   }
   .card-video--large .infos h2 {
     font-size: 26px;

@@ -85,3 +85,19 @@ A entrega final será composta por dois artefatos:
 ## Anotações
 
 - Para os ícones, optei por usar SVG em base64, já que são poucos ícones e não vejo necessidade de carregar uma biblioteca inteira.
+- Na versão desktop, foi utilizado apenas JavaScript para implementar o carrossel, enquanto na versão mobile o scroll dos itens foi feito em css
+- Para realizar as requisições, criei a classe WPPosts, responsável por gerenciá-las. A fim de reduzir o número de requisições, implementei o armazenamento dos dados em um arquivo .json. Sempre que a página é acessada, verifico se o arquivo json foi atualizado em menos de 24 horas (definido por uma variável que determina o intervalo entre as novas requisições). Caso positivo, exibo os dados armazenados no json. Caso contrário, realizo uma nova requisição e atualizo o arquivo json.
+
+- O construtor da classe recebe um argumento opcional e define o valor da propriedade args e da propriedade timestamp é definida como o valor atual de tempo.
+  Os métodos públicos incluem:
+- get(): realiza uma solicitação à API usando a ação e argumentos definidos e armazena a resposta na propriedade response e o código de resposta HTTP na propriedade httpcode.
+- comments(): define a ação como "comentários" e retorna o próprio objeto.
+- posts(): define a ação como "posts" e retorna o próprio objeto.
+- getData(): verifica se os dados já foram buscados nos últimos 24h (valor da propriedade freshnessInterval) e, se necessário, realiza uma nova busca usando o método integrar(). Retorna os dados JSON armazenados na propriedade data.
+- integrar(): chama o método get() e, se a resposta for bem-sucedida (código de resposta HTTP = 200), salva os dados em um arquivo JSON, salva a data e hora da solicitação em um arquivo JSON separado, registra um log em um arquivo de texto e chama o método commentsCount() se a ação for "posts".
+- getActionUrl(): retorna a URL completa da ação e argumentos definidos.
+- openJsonFile(): abre e lê o conteúdo do arquivo JSON e armazena na propriedade data.
+- saveAsJsonFile(): salva a resposta da API em um arquivo JSON, com base na ação definida.
+- saveLastAccess(): lê a data e hora da última solicitação de um arquivo JSON, verifica se a solicitação atual foi feita após o intervalo definido e, se sim, atualiza a data e hora no arquivo JSON.
+- commentsCount($id): recebe um ID de postagem e retorna o número de comentários para essa postagem, lendo o arquivo JSON correspondente.
+- creatCard($content, $classAdicional = ''): recebe um objeto de postagem e uma classe adicional opcional e gera o HTML para exibir uma miniatura de postagem com a imagem, título e link da postagem, além do número de comentários e data de publicação. O tamanho da imagem depende da classe adicional.
